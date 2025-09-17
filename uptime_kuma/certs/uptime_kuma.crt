@@ -1,0 +1,9 @@
+-----BEGIN CERTIFICATE-----
+  uptime_kuma certificate
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+  intermediate_ca certificate
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+  root_ca certificate
+-----END CERTIFICATE-----
