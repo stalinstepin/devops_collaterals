@@ -1,0 +1,13 @@
+[Unit]
+Description=Update config with current host IP
+After=network-online.target
+Before=docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update-prometheus-config.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

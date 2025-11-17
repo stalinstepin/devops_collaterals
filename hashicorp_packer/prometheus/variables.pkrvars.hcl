@@ -1,0 +1,9 @@
+ami_region    = "ap-south-1"
+instance_type = "t2.large"
+source_ami        = "ami-0f457776b2f2411c1"
+ssh_username      = "ubuntu"
+ssh_keypair_name  = "aws-testing-keypair"
+vpc_id            = "vpc-04xxxxxxxxxxx1c7b" # Update this value.
+subnet_id         = "subnet-02xxxxxxxxxxxf6d" # Update this value.
+security_group_id = "sg-0fxxxxxxxxxxx94" # Update this value.
+ssh_private_key_file = "/tmp/aws_packer_keypair.pem"  # Update your key here. 

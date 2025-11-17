@@ -1,0 +1,23 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+
+  # Attach these labels to any time series or alerts when communicating with
+  # external systems (federation, remote storage, Alertmanager).
+  external_labels:
+    hosted_by: 'docker-mac'
+    hostname: 'prometheus-qa'
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+
+  # Job to scrape metrics for prometheus.
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+  
+  - job_name: node
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9100']
