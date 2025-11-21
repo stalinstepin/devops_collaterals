@@ -82,7 +82,9 @@ build {
   sources = ["source.amazon-ebs.prometheus"]
 
   provisioner "file" {
-    source      = "/Users/sstepin/Quickstart_labs/packer_projects/prometheus/files/files.tar.gz" # This file gets created only once the "build.sh" script is triggered. So, don't panic if you do not see this file in the repo. 
+    # The below files.tar.gz file gets created only once the "build.sh" script is triggered. So, don't panic if you do not see this file.tar.gz in this repo. 
+    # Also update the below directory path where the repo is cloned to. 
+    source      = "/Users/sstepin/Quickstart_labs/packer_projects/prometheus/files/files.tar.gz" 
     destination = "/tmp/"
   }
 
